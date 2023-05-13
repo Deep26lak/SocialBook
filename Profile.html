@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile page - SocialBook</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reponsive.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="app.js" defer></script>
+    <script src="https://kit.fontawesome.com/ce328ec234.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Nav bar section -->
+    <section class="bg-blue-500 h-16 flex-wrap m-auto max-w-[100vw] min-w-[300px]  sticky top-0 z-10">
+        <nav id="container" class=" flex  justify-between w-[80%] m-auto">
+            <div class="left_nav flex mt-2">
+                <a href="mainPage.html" target="_blank" class="cursor-pointer"> <img src="./images/logo2.png" alt="" class="w-40"></a>
+                <ul class="nav_links flex gap-5 mt-1 ml-10">
+                    <li><img src="./images/notification.png" alt="" class="w-7"></li>
+                    <li><img src="./images/inbox.png" alt="" class="w-7"></li>
+                    <li><img src="./images/video.png" alt="" class="w-7"></li>
+                </ul>
+
+            </div>
+            <div class="right_nav mt-2 flex">
+                <div class="search flex bg-[#efefef] rounded-full w-96">
+                    <img src="./images/search.png" alt="" class="w-7 h-7 mt-2 ml-3">
+                    <input type="text" placeholder="Search" class="p-1 ml-3  border-n bg-[#efefef] ">
+                </div>
+                <div class="online cursor-pointer ">
+                    <img src="./images/Profile pic.png" alt="" id="toggle-btn" class="w-10 ml-5 rounded-full">
+                </div>
+                <div class="messenger">
+                    <a href=""><i class="fa-brands fa-facebook-messenger fa-2xl ml-3 mt-5 "></i></a>
+                </div>
+            </div>
+            <div
+                class="toggle_section  absolute w-[350px] top-20 shadow-2xl p-4 duration-300 rounded-md right-20 max-lg:right-10 opacity-0 overflow-hidden h-0 bg-white">
+                <div class="Toggle-img flex mb-5">
+                    <img src="./images/Profile pic.png" alt="" class="rounded-full w-14 mt-2 h-14 mr-5">
+                    <div class="Toggle-about ">
+                        <p class="text-gray-500 text-lg font-bold tracking-wider">Deepak Lakwal</p>
+                        <a href="Profile.html" target="_blank" class="text-blue-400 inline-block">See your profile</a>
+
+                    </div>
+                    <button class=" bg-gray-300 darkBtn rounded-3xl h-7 mt-3 ml-8 border-none w-14 duration-200 "
+                        onclick="icontoggle()" id="btn"><span
+                            class="bg-white insidebtn w-5 h-5 ml-1  rounded-3xl block duration-200"></span></button>
+                </div>
+                <hr>
+                <hr>
+                <div class="Toggle-img flex  my-5">
+                    <img src="./images/feedback.png" alt="" class="rounded-full w-12  h-12 mr-5">
+                    <div class="Toggle-about">
+                        <p class="text-gray-500 text-lg font-bold tracking- mt-3wider">Give Feedback</p>
+                        <p class="small-text text-blue-400 inline-block ">Help us to improve</p>
+                        <img src="./images/arrow.png" class="w-2 inline-block ml-1 " alt="">
+                    </div>
+                </div>
+                <hr>
+                <hr>
+
+                <div class="Toggle-img flex my-5 ">
+                    <img src="./images/setting.png" alt="" class="rounded-full w-12  h-12 mr-5">
+                    <div class="Toggle-about">
+                        <p class="text-gray-500 text-lg  tracking-wider mt-3">Setting & Privacy</p>
+                    </div>
+                </div>
+                <div class="Toggle-img flex my-5 ">
+                    <img src="./images/help.png" alt="" class="rounded-full w-12  h-12 mr-5">
+                    <div class="Toggle-about">
+                        <p class="text-gray-500 text-lg  tracking-wider mt-3">Help & Support</p>
+
+                    </div>
+                </div>
+
+                <div class="Toggle-img flex my-5 ">
+                    <img src="./images/display.png" alt="" class="rounded-full w-12  h-12 mr-5">
+                    <div class="Toggle-about">
+                        <p class="text-gray-500 text-lg tracking-wider mt-3">Display & accessibility</p>
+                    </div>
+                </div>
+
+                <div class="Toggle-img flex my-5 ">
+                    <img src="./images/logout.png" alt="" class="rounded-full w-12 mt-2 h-12 mr-5">
+                    <div class="Toggle-about">
+                       <a href="index.html"> <p class="text-gray-500 text-lg tracking-wider mt-3">Log Out</p> </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <!-- Profile section -->
+    <section class="profile-section max-w-[1200px] min-w-[400px] mt-5 m-auto    rounded-xl  ">
+        <!-- cover image -->
+        <div class="cover_pic w-[100%] flex-wrap">
+          <a href="./images/cover.png" target="_blank">  <img src="./images/cover.png" alt="" class="  rounded-xl"></a>
+        </div>
+
+        <!-- profile about -->
+        <div class="profile-folder w-[100%] my-6 relative h-auto bg-white flex max-sm:flex-col justify-between rounded-md p-5">
+            <div class="left_side flex max-sm:flex-row">
+              <a href="./images/Profile pic.png" target="_blank" class="cursor-pointer">  <img src="./images/Profile pic.png" alt="" class=" max-sm:w-20 rounded-md"></a>
+                <div class="img-about mt-3 ml-7 max-sm:ml-10">
+                    <h2 class="text-2xl text-gray-600 tracking-wide font-extrabold">Deepak lakwal</h2>
+                    <p class="text-gray-500 ">120 Friends - 20 Mutuals</p>
+                    <div class=" img_icons max-sm:hidden">
+                        <ul>
+                            <img src="./images/member-1.png" class="w-8  rounded-full my-3 inline-block">
+                            <img src="./images/member-2.png" class="w-8  rounded-full my-3 inline-block">
+                            <img src="./images/member-3.png" class="w-8  rounded-full my-3 inline-block">
+                            <img src="./images/member-4.png" class="w-8  rounded-full my-3 inline-block">
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="right_side max-sm:mt-10">
+                <div class="buttons max-sm:flex">
+                    <button class="bg-gray-200 p-2 rounded-md ml-4 max-sm:ml-0"> <img src="./images/add-friends.png" alt=""
+                            class="inline-block w-6 mr-1"> Friends</button>
+                    <button class=" bg-blue-500 p-2 rounded-md ml-4 text-white"> <img src="./images/message.png" alt=""
+                            class="inline-block w-6 mr-1">Messege</button>
+                </div>
+                <button class="block max-sm:hidden absolute bottom-10 right-10 bg-slate-200 p-4 rounded-md "><img
+                        src="./images/more.png" class="w-6"></button>
+            </div>
+        </div>
+
+        <!-- left and right part   profile contant -->
+        <div class="profile-content  flex h-auto justify-between  rounded-md my-5">
+
+
+
+            <!-- left part -->
+            <div class="left_part basis-[31%]  ">
+                <div class="bg-white rounded-xl h-auto p-5 ">
+                    <div class="intro">
+                        <h1 class="text-xl font-extrabold tracking-wider text-gray-600">Intro</h1>
+                        <p class="text-gray-500 text-center my-4">Believe in yourSelf and you can do unbelievable
+                            things. <img src="./images/feeling.png" class="inline-block w-5"></p>
+                    </div>
+                    <hr>
+                    <hr>
+                    <hr>
+                    <ul class="mt-7">
+                        <li class="text-gray-500"><img src="./images/profile-job.png"
+                                class="w-7 inline-block my-3 mr-4">Front-end Developer</li>
+                        <li class="text-gray-500"><img src="./images/profile-study.png"
+                                class="w-7 inline-block my-3 mr-4">Graduate from DU</li>
+                        <li class="text-gray-500"><img src="./images/profile-study.png"
+                                class="w-7 inline-block my-3 mr-4">Went to DPS Delhi</li>
+                        <li class="text-gray-500"><img src="./images/profile-home.png"
+                                class="w-7 inline-block my-3 mr-4">Live in Banglore, India</li>
+                        <li class="text-gray-500"><img src="./images/profile-location.png"
+                                class="w-7 inline-block my-3 mr-4">From Rajasthan, India</li>
+                    </ul>
+                </div>
+                 <!-- second-left_part -->
+                <div class="second-left_part mt-6 bg-white p-5 rounded-xl h-auto ">
+                    <div class="picture_collection">
+                        <div class="photos flex justify-between">
+                            <h1 class="text-xl text-gray-600 font-bold">Photos</h1>
+                            <p class="text-blue-500">All photos</p>
+                        </div>
+                        <div class="photo_list h-auto mt-3">
+                           <a href="./images/resize-photo-1.png" target="_blank"> <img src="./images/resize-photo-1.png" class=" w-24 m-2 inline-block"></a>
+                           <a href="./images/resize-photo-6.png" target="_blank"> <img src="./images/resize-photo-6.png" class=" w-24 m-2 inline-block"></a>
+                           <a href="./images/resize-photo-3.png" target="_blank"> <img src="./images/resize-photo-3.png" class=" w-24 m-2 inline-block"></a>
+                           <a href="./images/resize-photo-4.png" target="_blank"> <img src="./images/resize-photo-4.png" class=" w-24 m-2 inline-block"></a>
+                           <a href="./images/resize-photo-5.png" target="_blank"> <img src="./images/resize-photo-5.png" class=" w-24 m-2 inline-block"></a>
+                           <a href="./images/resize-photo-6.png" target="_blank"> <img src="./images/resize-photo-6.png" class=" w-24 m-2 inline-block"></a>
+                           
+                        </div>
+                    </div>
+                </div>
+                <!-- third LEFT part -->
+                <div class="third-left_part mt-6 bg-white p-5 rounded-xl h-auto " id="Friends">
+                    <div class="picture_collection">
+                        <div class="photos flex justify-between">
+                            <h1 class="text-xl text-gray-600 font-bold">Friends <br>
+                                <span class="text-xs  text-gray-500 font-normal">120(10 Mutuals)</span>
+                            </h1>
+                            <p class="text-blue-500">All photos</p>
+                        </div>
+                        <div class="photo_list h-auto mt-3">
+                            <ul>
+                                <li class="text-gray-500  inline-block"> <img src="./images/member-1.png" class=" w-24 m-2 ">Joseph N</li>
+                                <li class="text-gray-500  inline-block"> <img src="./images/member-2.png" class=" w-24 m-2 ">Nathan M</li>
+                                <li class="text-gray-500  inline-block"> <img src="./images/member-3.png" class=" w-24 m-2 ">George D</li>
+                                <li class="text-gray-500  inline-block"> <img src="./images/member-4.png" class=" w-24 m-2 ">Francis l</li>
+                                <li class="text-gray-500  inline-block"> <img src="./images/member-5.png" class=" w-24 m-2 ">Anthony E</li>
+                                <li class="text-gray-500  inline-block"> <img src="./images/member-6.png" class=" w-24 m-2 "> Micheal D</li>
+                                <li class="text-gray-500  inline-block"> <img src="./images/member-7.png" class=" w-24 m-2 ">Edward M</li>
+                                <li class="text-gray-500  inline-block"> <img src="./images/member-8.png" class=" w-24 m-2 ">Brandon O</li>
+                                <li class="text-gray-500  inline-block"> <img src="./images/member-9.png" class=" w-24 m-2 ">John Doe</li>
+                                <li class="text-gray-500  inline-block"> <img src="./images/photo1.png" class=" w-24 m-2 ">Edward M</li>
+                                <li class="text-gray-500  inline-block"> <img src="./images/photo3.png" class=" w-24 m-2 ">Brandon O</li>
+                                <li class="text-gray-500  inline-block"> <img src="./images/photo4.png" class=" w-24 m-2 ">John Doe</li>
+                                
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        
+
+            <!-- right part -->
+            <div class="right_part basis-[67%] w-screen m-auto h-auto">
+
+                <!-- white Post section -->
+                <div class="feeling_section w-full h-auto p-5 bg-white rounded-md ">
+                    <div class="Feeling-img flex ">
+                        <img src="./images/Profile pic.png" alt="" class="rounded-full w-14 mr-5">
+                        <div class="feel-about">
+                            <p class="text-gray-500 text-lg font-bold tracking-wider">Deepak Lakwal</p>
+                            <p class="text-gray-400 inline-block">Public</p>
+                            <img src="./images/arrow.png" class="w-2 inline-block ml-1" alt="">
+                        </div>
+                    </div>
+                    <div class="think text-gray-400 ml-16 mt-5">
+                       <textarea name="white_post" id="white_post" cols="30 " rows="2" class="resize-no  p-2">What's on your mind, Deep?</textarea> 
+                    </div>
+                    <hr class="w-[80%] mx-auto">
+                    <div class="icons mt-7 flex justify-evenly">
+                        <div class="video-icon flex">
+                            <img src="./images/live-video.png" class="w-6 h-4 mx-3 mt-1" alt="">
+                            <p class="text-gray-400">Live video</p>
+                        </div>
+                        <div class="video-icon flex">
+                            <img src="./images/photo.png" class="w-5 h-5 mx-3" alt="">
+                            <p class="text-gray-400">Live video</p>
+                        </div>
+                        <div class="video-icon flex">
+                            <img src="./images/feeling.png" class="w-6 h-6 mx-3" alt="">
+                            <p class="text-gray-400">Live video</p>
+                        </div>
+                    </div>
+    
+                </div>
+
+
+
+                <!-- Posts section -->
+                <div class="post_section w-full h-auto p-5 my-6  bg-white  rounded-md ">
+                    <div class="Feeling-img flex ">
+                        <img src="./images/Profile pic.png" alt="" class="rounded-full w-14 mr-5">
+                        <div class="feel-about">
+                            <p class="text-gray-500 text-lg font-bold tracking-wider">Deepak Lakwal</p>
+                            <p class="text-gray-400 inline-block">May 10 2023, 09:23 </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-gray-500 my-4 tracking-wide">
+                         Follow <a href="#" class="text-black">@i_deep_26 </a> On instagram for More intresting Web pages and UI designs <a href="#" class="text-blue-500">
+                            #DeepakLakwal #deep #Developer
+                         </a>
+                        </p>
+                        <img src="./images/feed-image-1.png" alt="" class="rounded-lg my-4">
+                        <div >
+                            <a href="#" id=filled_like class="mr-8 text-gray-500"><img src="./images/like.png" class="w-7 inline-block mr-3 " alt="">120</a>
+                            <a href="#" class="mr-8 text-gray-500"><img src="./images/comments.png" class="w-7 inline-block mr-3  " alt="">40</a>
+                            <a href="#" class="mr-8 text-gray-500"><img src="./images/share.png" class="w-7 inline-block mr-3  " alt="">29</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="post_section w-full h-auto p-5 my-6  bg-white rounded-md ">
+                    <div class="Feeling-img flex ">
+                        <img src="./images/Profile pic.png" alt="" class="rounded-full w-14 mr-5">
+                        <div class="feel-about">
+                            <p class="text-gray-500 text-lg font-bold tracking-wider">Deepak Lakwal</p>
+                            <p class="text-gray-400 inline-block">May 10 2023, 09:23 </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-gray-500 my-4 tracking-wide">
+                         Follow <a href="#" class="text-black">@i_deep_26 </a> On instagram for More intresting Web pages and UI designs <a href="#" class="text-blue-500">
+                            #DeepakLakwal #deep #Developer
+                         </a>
+                        </p>
+                        <img src="./images/feed-image-2.png" alt="" class="rounded-lg my-4">
+                        <div >
+                            <a href="#" class="mr-8 text-gray-500"><img src="./images/like-blue.png" class="w-7 inline-block mr-3 " alt="">120</a>
+                            <a href="#" class="mr-8 text-gray-500"><img src="./images/comments.png" class="w-7 inline-block mr-3  " alt="">40</a>
+                            <a href="#" class="mr-8 text-gray-500"><img src="./images/share.png" class="w-7 inline-block mr-3  " alt="">29</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="post_section w-full h-auto p-5 my-6  bg-white rounded-md ">
+                    <div class="Feeling-img flex ">
+                        <img src="./images/Profile pic.png" alt="" class="rounded-full w-14 mr-5">
+                        <div class="feel-about">
+                            <p class="text-gray-500 text-lg font-bold tracking-wider">Deepak Lakwal</p>
+                            <p class="text-gray-400 inline-block">May 10 2023, 09:23 </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-gray-500 my-4 tracking-wide">
+                         Follow <a href="#" class="text-black">@i_deep_26 </a> On instagram for More intresting Web pages and UI designs <a href="#" class="text-blue-500">
+                            #DeepakLakwal #deep #Developer
+                         </a>
+                        </p>
+                        <img src="./images/feed-image-3.png" alt="" class="rounded-lg my-4">
+                        <div >
+                            <a href="#" class="mr-8 text-gray-500"><img src="./images/like.png" class="w-7 inline-block mr-3 " alt="">120</a>
+                            <a href="#" class="mr-8 text-gray-500"><img src="./images/comments.png" class="w-7 inline-block mr-3  " alt="">40</a>
+                            <a href="#" class="mr-8 text-gray-500"><img src="./images/share.png" class="w-7 inline-block mr-3  " alt="">29</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="post_section w-full h-auto p-5 my-6  bg-white  rounded-md ">
+                    <div class="Feeling-img flex ">
+                        <img src="./images/Profile pic.png" alt="" class="rounded-full w-14 mr-5">
+                        <div class="feel-about">
+                            <p class="text-gray-500 text-lg font-bold tracking-wider">Deepak Lakwal</p>
+                            <p class="text-gray-400 inline-block">May 10 2023, 09:23 </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-gray-500 my-4 tracking-wide">
+                         Follow <a href="#" class="text-black">@i_deep_26 </a> On instagram for More intresting Web pages and UI designs <a href="#" class="text-blue-500">
+                            #DeepakLakwal #deep #Developer
+                         </a>
+                        </p>
+                        <img src="./images/feed-image-4.png" alt="" class="rounded-lg my-4">
+                        <div >
+                            <a href="#" class="mr-8 text-gray-500"><img src="./images/like.png" class="w-7 inline-block mr-3 " alt="">120</a>
+                            <a href="#" class="mr-8 text-gray-500"><img src="./images/comments.png" class="w-7 inline-block mr-3  " alt="">40</a>
+                            <a href="#" class="mr-8 text-gray-500"><img src="./images/share.png" class="w-7 inline-block mr-3  " alt="">29</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="post_section w-full h-auto p-5 my-6  bg-white rounded-md ">
+                    <div class="Feeling-img flex ">
+                        <img src="./images/Profile pic.png" alt="" class="rounded-full w-14 mr-5">
+                        <div class="feel-about">
+                            <p class="text-gray-500 text-lg font-bold tracking-wider">Deepak Lakwal</p>
+                            <p class="text-gray-400 inline-block">May 10 2023, 09:23 </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-gray-500 my-4 tracking-wide">
+                         Follow <a href="#" class="text-black">@i_deep_26 </a> On instagram for More intresting Web pages and UI designs <a href="#" class="text-blue-500">
+                            #DeepakLakwal #deep #Developer
+                         </a>
+                        </p>
+                        <img src="./images/feed-image-5.png" alt="" class="rounded-lg my-4">
+                        <div >
+                            <a href="#" class="mr-8 text-gray-500"><img src="./images/like.png" class="w-7 inline-block mr-3 " alt="">120</a>
+                            <a href="#" class="mr-8 text-gray-500"><img src="./images/comments.png" class="w-7 inline-block mr-3  " alt="">40</a>
+                            <a href="#" class="mr-8 text-gray-500"><img src="./images/share.png" class="w-7 inline-block mr-3  " alt="">29</a>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+
+    <!-- footer section -->
+    <footer>
+        <div class="button w-full mt-10 text-center">
+            <button class=" border border-gray-700 p-1 rounded-md text-gray-500">Load More</button>
+            <p class="text-gray-500 my-10">@Copyright 2023 - SocialBook _ Deepak lakwal</p>
+        </div>
+
+    </footer>
+</body>
+
+</html>

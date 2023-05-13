@@ -1,0 +1,102 @@
+/* Login Page responsive */
+@media only screen and (max-width: 600px) {
+    #login-outer-box {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        margin: auto;
+    }
+
+    .logo {
+        max-width: 80vw;
+        margin: 40px;
+    }
+
+    .logo p {
+        font-size: 1.7rem;
+
+    }
+
+    body {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .login-container {
+        width: 80vw;
+        margin: auto;
+
+    }
+    .right_part {
+        flex-basis: 90% !important;
+        /* max-width: 90vw; */
+
+        margin: auto;
+    }
+    .think #white_post{
+        columns: 3;
+    }
+}
+
+/* Profile page responsive */
+/* @media only screen and (max-width: 600px ){
+    #container ul{
+     display: none;
+    }
+    .right_nav .search{
+        display: none;
+    }
+    .left_part{
+        display: none;
+    }
+} */
+
+@media only screen and (max-width: 992px) {
+    #container .nav_links {
+        display: none;
+    }
+
+    .right_nav .search {
+        display: none;
+    }
+
+    .cover_pic {
+        max-width: 90vw;
+        overflow-y: hidden;
+        margin: auto;
+
+    }
+
+    .profile-folder {
+        max-width: 90vw;
+        margin: auto;
+        overflow-y: hidden;
+        margin-block: 20px;
+    }
+
+    .left_part {
+        display: none;
+    }
+
+    .right_part {
+        flex-basis: 90% !important;
+        /* max-width: 90vw; */
+
+        margin: auto;
+    }
+    .think #white_post{
+        columns: 3;
+    }
+}
+
+/* @media only screen and (min-width: 1200px) {
+    .cover_pic{
+        width: 80vw;
+        margin: auto;
+       }
+       .profile-folder{
+        width: 80vw;
+        margin: auto;
+       }
+
+} */
